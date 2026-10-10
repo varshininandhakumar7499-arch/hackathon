@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>முதல் மணி (Mudhal Mani) - முழுமையான சைபர் மோசடி அவசர உதவி & வீடியோ டெமோ</title>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap');
+
+    :root {
+      --primary: #15803d;
+      --primary-hover: #166534;
+      --emergency: #dc2626;
+      --emergency-hover: #b91c1c;
+      --bg-page: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --border-color: #cbd5e1;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Mukta Malar', 'Noto Sans Tamil', 'Nirmala UI', sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 16px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Sticky Switcher */
+    .top-nav {
+      background: #0f172a;
+      color: white;
+      padding: 10px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .mode-switch-btn {
+      background: #334155;
+      color: white;
+      border: 1px solid #475569;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+
+    .mode-switch-btn.active-mode {
+      background: #16a34a;
+      border-color: #16a34a;
+    }
+
+    /* App Header */
+    .app-header {
+      background: white;
+      border-radius: 16px;
+      padding: 16px 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      margin: 16px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid var(--border-color);
+    }
+
+    .brand-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .badge-golden {
+      background: #fef3c7;
+      color: #92400e;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      display: inline-flex;
+      margin-top: 4px;
+    }
+
+    /* Emergency 1930 Card */
+    .emergency-card {
+      background: linear-gradient(135deg, #fff5f5 0%, #fee2e2 100%);
+      border: 2px solid #fca5a5;
+      border-radius: 20px;
+      padding: 24px 20px;
+      text-align: center;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 20px rgba(220, 38, 38, 0.12);
+    }
+
+    .btn-emergency-dial {
+      background-color: var(--emergency);
+      color: white;
+      text-decoration: none;
+      font-size: 1.35rem;
+      font-weight: 800;
+      padding: 18px 24px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 6px 20px rgba(220, 38, 38, 0.35);
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .calm-notice {
+      background: #f0fdf4;
+      border-left: 5px solid #16a34a;
+      border-radius: 12px;
+      padding: 12px 16px;
+      margin-top: 14px;
+      text-align: left;
+      font-size: 0.95rem;
+      color: #14532d;
+    }
+
+    /* Card Box */
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btn-listen {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      width: 100%;
+      font-family: inherit;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-secondary {
+      background-color: #f1f5f9;
+      color: #334155;
+      border: 1px solid #cbd5e1;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .btn-danger {
+      background-color: #fef2f2;
+      color: #dc2626;
+      border: 1px solid #fca5a5;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .form-group { margin-bottom: 18px; }
+    .form-label { display: block; font-weight: 700; margin-bottom: 8px; color: #1e293b; }
+    
+    .text-input, .select-box {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-family: inherit;
+      background: white;
+    }
+
+    .options-grid { display: grid; gap: 8px; }
+    
+    .option-btn {
+      background: #f8fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 14px 16px;
+      cursor: pointer;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.15s;
+    }
+
+    .option-btn:hover { background: #f1f5f9; }
+
+    .option-btn.selected {
+      background: #f0fdf4;
+      border-color: var(--primary);
+      color: #14532d;
+    }
+
+    .chip-btn {
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+
+    .toggle-group { display: flex; gap: 10px; }
+    .toggle-btn {
+      flex: 1; padding: 10px; border: 2px solid #e2e8f0; border-radius: 10px;
+      font-weight: 700; cursor: pointer; text-align: center;
+    }
+    .toggle-btn.selected-yes { background: #fee2e2; border-color: #dc2626; color: #991b1b; }
+    .toggle-btn.selected-no { background: #dcfce7; border-color: #16a34a; color: #14532d; }
+
+    /* Checklist */
+    .checklist-item {
+      background: #fff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 12px;
+      border-left: 6px solid #f59e0b;
+    }
+    .checklist-item.critical { border-left-color: #dc2626; background: #fffafa; }
+
+    /* Call Card & Complaints */
+    .call-card-box {
+      background: #0f172a;
+      color: #f8fafc;
+      border-radius: 16px;
+      padding: 18px;
+      margin-bottom: 16px;
+    }
+    .call-card-item {
+      background: #1e293b;
+      border-left: 4px solid #38bdf8;
+      padding: 12px 14px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    .complaint-output {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 14px;
+      font-size: 0.9rem;
+      white-space: pre-wrap;
+      max-height: 280px;
+      overflow-y: auto;
+      line-height: 1.6;
+    }
+
+    /* Video Player Mockup */
+    .video-viewport {
+      background: #0f172a;
+      border-radius: 20px;
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+    .phone-mockup {
+      max-width: 420px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 32px;
+      border: 8px solid #334155;
+      overflow: hidden;
+      min-height: 640px;
+      display: flex;
+      flex-direction: column;
+    }
+    .phone-notch {
+      background: #334155;
+      height: 20px;
+      width: 130px;
+      margin: 0 auto;
+      border-radius: 0 0 12px 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Mode Switcher -->
+  <div class="top-nav">
+    <div style="font-weight: 700;">🛡️ முதல் மணி (Mudhal Mani)</div>
+    <div style="display: flex; gap: 8px;">
+      <button id="nav-btn-app" class="mode-switch-btn active-mode" onclick="switchView('app')">
+        📱 நேரடி செயலி (App)
+      </button>
+      <button id="nav-btn-video" class="mode-switch-btn" onclick="switchView('video')">
+        🎬 வீடியோ டெமோ (Video Demo)
+      </button>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- VIEW 1: COMPLETE INTERACTIVE APPLICATION -->
+    <div id="view-app">
+      <header class="app-header">
+        <div>
+          <div class="brand-title">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            முதல் மணி (Mudhal Mani)
+          </div>
+          <div class="badge-golden">
+            ⚡ முதல் மணி நேரம் மிக முக்கியம் (Golden Hour)
+          </div>
+        </div>
+        <button id="btn-lang-toggle" class="btn-secondary" onclick="toggleLang()" style="padding: 6px 12px;">
+          English
+        </button>
+      </header>
+
+      <div id="app-dynamic-step"></div>
+    </div>
+
+    <!-- VIEW 2: FULL VIDEO SIMULATOR & RECORDER -->
+    <div id="view-video" style="display: none;">
+      <div style="background: #1e293b; color: white; padding: 14px 20px; border-radius: 16px; margin: 16px 0; display: flex; justify-content: space-between; align-items: center;">
+        <button id="btn-v-play" class="btn-primary" style="width: auto; background: #22c55e;" onclick="toggleVideoPlayback()">
+          ▶ Play Video
+        </button>
+        <span id="v-timestamp" style="font-family: monospace; font-size: 0.9rem; color: #94a3b8;">Scene 1/5</span>
+        <button class="btn-primary" style="width: auto; background: #dc2626;" onclick="recordAndDownloadWebm()">
+          🔴 வீடியோ சேமி (.webm)
+        </button>
+      </div>
+
+      <div class="video-viewport">
+        <div class="phone-mockup">
+          <div class="phone-notch"></div>
+          <div id="video-sim-content" style="padding: 16px; flex: 1; overflow-y: auto;"></div>
+        </div>
+      </div>
+
+      <div style="background: #1e293b; border-left: 5px solid #38bdf8; padding: 14px; border-radius: 12px; margin-bottom: 20px; color: white;">
+        <div style="font-size: 0.8rem; color: #38bdf8; font-weight: 700;">🎙️ தமிழ் குரல் விளக்கம் (Live Narration):</div>
+        <div id="v-narration-sub" style="font-size: 1rem; font-weight: 600; margin-top: 4px;">
+          "வீடியோவை இயக்க 'Play Video' அழுத்தவும்."
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const state = {
+      lang: 'ta',
+      step: 0,
+      triage: {
+        fraudType: 'refund',
+        amount: '25000',
+        time: 'oneHour',
+        bank: 'sbi',
+        flagOtp: false,
+        flagPin: true,
+        flagRemoteApp: false
+      },
+      evidence: {
+        utr: '428901847120',
+        amount: '25000',
+        suspectUpi: 'refund.desk98@paytm',
+        suspectPhone: '9840123456',
+        victimName: 'கார்த்திக் (Victim)',
+        victimPhone: '9876543210',
+        date: new Date().toLocaleDateString('en-IN') + ', 02:15 PM'
+      },
+      activeTab: 'callCard',
+      ackNumber: ''
+    };
+
+    const BANK_HELPLINES = {
+      sbi: { name: "State Bank of India (SBI)", phone: "1800111109 / 18004253800", steps: "YONO SBI App ➔ Service Requests ➔ Block Debit Card / UPI" },
+      canara: { name: "Canara Bank", phone: "18004250018", steps: "Canara ai1 App ➔ Cards ➔ Block / Disable Online Txns" },
+      indianBank: { name: "Indian Bank", phone: "180042500000", steps: "IndOASIS App ➔ Cards Management ➔ Switch Off Domestic Txns" },
+      hdfc: { name: "HDFC Bank", phone: "18001600 / 18002664060", steps: "HDFC Mobile Banking ➔ Pay ➔ Cards ➔ Block Immediately" },
+      icici: { name: "ICICI Bank", phone: "18001080", steps: "iMobile Pay ➔ Services ➔ Card Services ➔ Block Card" },
+      gpay: { name: "Google Pay", phone: "1800-419-0157", steps: "Google Pay ➔ Profile ➔ Help & Feedback ➔ Raise Dispute" },
+      phonepe: { name: "PhonePe", phone: "080-68727374", steps: "PhonePe ➔ History ➔ Transaction ➔ Contact Support" },
+      paytm: { name: "Paytm", phone: "0120-3888388", steps: "Paytm ➔ Balance & History ➔ Need Help ➔ Report Fraud" },
+      other: { name: "மற்ற வங்கி / Other Bank", phone: "1930", steps: "Check official passbook or helpline inside mobile app" }
+    };
+
+    const SAMPLES = [
+      { id: "s1", name: "Google Pay போலி ரீஃபண்ட் (₹25,000)", utr: "428901847120", amount: "25000", upi: "refund.desk98@paytm", phone: "9840123456", bank: "sbi" },
+      { id: "s2", name: "PhonePe கேஷ்பேக் பரிசு மோசடி (₹14,500)", utr: "318290451299", amount: "14500", upi: "cashback.claim@okhdfcbank", phone: "9176543210", bank: "phonepe" },
+      { id: "s3", name: "வங்கி SMS பற்று எச்சரிக்கை (₹48,000)", utr: "430182749102", amount: "48000", upi: "fastpay.transfer@ibl", phone: "8899776655", bank: "indianBank" }
+    ];
+
+    const voice = {
+      speak(text) {
+        if (!window.speechSynthesis) return;
+        window.speechSynthesis.cancel();
+        const u = new SpeechSynthesisUtterance(text);
+        const voices = window.speechSynthesis.getVoices();
+        const ta = voices.find(v => v.lang.includes('ta') || v.name.toLowerCase().includes('tamil'));
+        if (ta) u.voice = ta;
+        u.lang = 'ta-IN';
+        u.rate = 0.88;
+        window.speechSynthesis.speak(u);
+      },
+      stop() {
+        if (window.speechSynthesis) window.speechSynthesis.cancel();
+      },
+      startMic(callback) {
+        const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+        if (!SpeechRec) { alert("மைக் வசதி உங்கள் ப்ரவுசரில் ஆதரிக்கப்படவில்லை."); return; }
+        const r = new SpeechRec();
+        r.lang = 'ta-IN';
+        r.onresult = e => {
+          const text = e.results[0][0].transcript;
+          const digits = text.replace(/[^0-9]/g, '');
+          callback(digits || text);
+        };
+        r.start();
+      }
+    };
+
+    function switchView(mode) {
+      voice.stop();
+      if (mode === 'app') {
+        document.getElementById('view-app').style.display = 'block';
+        document.getElementById('view-video').style.display = 'none';
+        document.getElementById('nav-btn-app').classList.add('active-mode');
+        document.getElementById('nav-btn-video').classList.remove('active-mode');
+        renderAppStep();
+      } else {
+        document.getElementById('view-app').style.display = 'none';
+        document.getElementById('view-video').style.display = 'block';
+        document.getElementById('nav-btn-video').classList.add('active-mode');
+        document.getElementById('nav-btn-app').classList.remove('active-mode');
+        showVideoScene(0);
+      }
+    }
+
+    function toggleLang() {
+      state.lang = state.lang === 'ta' ? 'en' : 'ta';
+      document.getElementById('btn-lang-toggle').innerText = state.lang === 'ta' ? 'English' : 'தமிழ்';
+      renderAppStep();
+    }
+
+    function renderAppStep() {
+      const container = document.getElementById('app-dynamic-step');
+      if (!container) return;
+
+      if (state.step === 0) {
+        container.innerHTML = `
+          <div class="emergency-card">
+            <h2 style="color: #991b1b; font-size: 1.35rem; margin-bottom: 6px; font-weight: 800;">
+              ${state.lang === 'ta' ? 'அவசர உதவி - 1930' : 'National Helpline - 1930'}
+            </h2>
+            <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 16px;">
+              மத்திய அரசின் தேசிய சைபர் கிரைம் அவசர உதவி எண் (இலவசம்)
+            </p>
+            <a href="tel:1930" class="btn-emergency-dial">
+              📞 1930 எண்ணை உடனே அழையுங்கள்
+            </a>
+            <div class="calm-notice">
+              🛡️ <strong>பதற்றமடையாதீர்கள்!</strong> முதல் 1 மணி நேரத்திற்குள் (Golden Hour) புகார் அளித்தால், வங்கிகள் மற்றும் காவல்துறையால் பணத்தை முடக்க (Freeze) அதிக வாய்ப்புள்ளது.
+            </div>
+          </div>
+
+          <div style="background: #eff6ff; padding: 12px 16px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; border: 1px solid #bfdbfe;">
+            <span style="font-weight: 700; color: #1e3a8a;">குரல் வழிகாட்டல்:</span>
+            <button class="btn-listen" onclick="voice.speak('பதற்றமடையாதீர்கள்! முதல் 1 மணி நேரத்திற்குள் 1930 எண்ணை அழைக்கவும்.')">
+              கேட்கவும் 🔊
+            </button>
+          </div>
+
+          <div class="card" style="text-align: center;">
+            <h3 style="margin-bottom: 10px; font-weight: 800;">அடுத்து என்ன செய்ய வேண்டும்?</h3>
+            <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 18px;">
+              1930 அதிகாரியிடம் சொல்ல வேண்டிய 5 முக்கிய குறிப்புகளை தயாரிக்கவும், வங்கியை தொடர்பு கொள்ளவும் எளிய கேள்விகளுக்கு பதிலளியுங்கள்.
+            </p>
+            <button class="btn-primary" onclick="state.step = 1; renderAppStep();">
+              உடனடி வழிகாட்டலை தொடங்கு ➔
+            </button>
+          </div>
+        `;
+      } 
+      else if (state.step === 1) {
+        container.innerHTML = `
+          <div class="card">
+            <div class="card-title">
+              <span>விரைவு பரிசீலனை (Triage)</span>
+              <button class="btn-listen" onclick="voice.speak('என்ன நடந்தது என்பதை கீழே உள்ள கேள்விகளில் தேர்வு செய்யுங்கள்.')">கேட்கவும் 🔊</button>
+            </div>
+            <p style="color: #64748b; font-size: 0.85rem; margin-bottom: 16px;">கீழே உள்ள 4-5 கேள்விகளைத் தேர்ந்தெடுங்கள்:</p>
+
+            <div class="form-group">
+              <label class="form-label">1. என்ன வகையான மோசடி நடந்தது?</label>
+              <div class="options-grid">
+                <div class="option-btn ${state.triage.fraudType === 'refund' ? 'selected' : ''}" onclick="state.triage.fraudType = 'refund'; renderAppStep();">
+                  <span>போலி ரீஃபண்ட் / கேஷ்பேக் அழைப்பு (Fake Refund Call)</span>
+                  ${state.triage.fraudType === 'refund' ? '✓' : ''}
+                </div>
+                <div class="option-btn ${state.triage.fraudType === 'upi' ? 'selected' : ''}" onclick="state.triage.fraudType = 'upi'; renderAppStep();">
+                  <span>UPI மோசடி (Google Pay / PhonePe / QR Code)</span>
+                  ${state.triage.fraudType === 'upi' ? '✓' : ''}
+                </div>
+                <div class="option-btn ${state.triage.fraudType === 'kyc' ? 'selected' : ''}" onclick="state.triage.fraudType = 'kyc'; renderAppStep();">
+                  <span>மின்சார பில் / ஆதார் KYC / வங்கி முடக்கம் மிரட்டல்</span>
+                  ${state.triage.fraudType === 'kyc' ? '✓' : ''}
+                </div>
+                <div class="option-btn ${state.triage.fraudType === 'remoteApp' ? 'selected' : ''}" onclick="state.triage.fraudType = 'remoteApp'; renderAppStep();">
+                  <span>போன் ஆப் டவுன்லோட் செய்ய சொன்னார்கள் (AnyDesk, TeamViewer)</span>
+                  ${state.triage.fraudType === 'remoteApp' ? '✓' : ''}
+                </div>
+                <div class="option-btn ${state.triage.fraudType === 'job' ? 'selected' : ''}" onclick="state.triage.fraudType = 'job'; renderAppStep();">
+                  <span>பகுதிநேர வேலை / டெலிகிராம் முதலீட்டு மோசடி</span>
+                  ${state.triage.fraudType === 'job' ? '✓' : ''}
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">2. இழந்த தொகை (ரூபாய்):</label>
+              <div style="display: flex; gap: 8px;">
+                <input type="number" id="in-amount" class="text-input" value="${state.triage.amount}" oninput="state.triage.amount = this.value; state.evidence.amount = this.value;" />
+                <button class="btn-secondary" style="padding: 0 16px;" title="பேசி உள்ளிட" onclick="voice.startMic(res => { state.triage.amount = res; state.evidence.amount = res; renderAppStep(); })">
+                  🎙️
+                </button>
+              </div>
+              <div style="display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap;">
+                <button class="chip-btn" onclick="state.triage.amount = '5000'; state.evidence.amount = '5000'; renderAppStep();">₹5,000</button>
+                <button class="chip-btn" onclick="state.triage.amount = '15000'; state.evidence.amount = '15000'; renderAppStep();">₹15,000</button>
+                <button class="chip-btn" onclick="state.triage.amount = '25000'; state.evidence.amount = '25000'; renderAppStep();">₹25,000</button>
+                <button class="chip-btn" onclick="state.triage.amount = '50000'; state.evidence.amount = '50000'; renderAppStep();">₹50,000</button>
+                <button class="chip-btn" onclick="state.triage.amount = '100000'; state.evidence.amount = '100000'; renderAppStep();">₹1,00,000</button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">3. சம்பவம் எப்போது நடந்தது?</label>
+              <div class="options-grid">
+                <div class="option-btn ${state.triage.time === 'justNow' ? 'selected' : ''}" onclick="state.triage.time = 'justNow'; renderAppStep();">
+                  <span>இப்போதுதான் (15 நிமிடங்களுக்குள்)</span>
+                  ${state.triage.time === 'justNow' ? '✓' : ''}
+                </div>
+                <div class="option-btn ${state.triage.time === 'oneHour' ? 'selected' : ''}" onclick="state.triage.time = 'oneHour'; renderAppStep();">
+                  <span>1 மணி நேரத்திற்குள் (முக்கிய நேரம்!)</span>
+                  ${state.triage.time === 'oneHour' ? '✓' : ''}
+                </div>
+                <div class="option-btn ${state.triage.time === 'today' ? 'selected' : ''}" onclick="state.triage.time = 'today'; renderAppStep();">
+                  <span>இன்று காலை / மதியம்</span>
+                  ${state.triage.time === 'today' ? '✓' : ''}
+                </div>
+                <div class="option-btn ${state.triage.time === 'yesterday' ? 'selected' : ''}" onclick="state.triage.time = 'yesterday'; renderAppStep();">
+                  <span>நேற்று அல்லது அதற்கு முன்</span>
+                  ${state.triage.time === 'yesterday' ? '✓' : ''}
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">4. பயன்படுத்திய வங்கி அல்லது ஆப்:</label>
+              <select class="select-box" onchange="state.triage.bank = this.value; renderAppStep();">
+                <option value="sbi" ${state.triage.bank === 'sbi' ? 'selected' : ''}>State Bank of India (SBI)</option>
+                <option value="canara" ${state.triage.bank === 'canara' ? 'selected' : ''}>Canara Bank</option>
+                <option value="indianBank" ${state.triage.bank === 'indianBank' ? 'selected' : ''}>Indian Bank</option>
+                <option value="hdfc" ${state.triage.bank === 'hdfc' ? 'selected' : ''}>HDFC Bank</option>
+                <option value="icici" ${state.triage.bank === 'icici' ? 'selected' : ''}>ICICI Bank</option>
+                <option value="gpay" ${state.triage.bank === 'gpay' ? 'selected' : ''}>Google Pay</option>
+                <option value="phonepe" ${state.triage.bank === 'phonepe' ? 'selected' : ''}>PhonePe</option>
+                <option value="paytm" ${state.triage.bank === 'paytm' ? 'selected' : ''}>Paytm</option>
+                <option value="other" ${state.triage.bank === 'other' ? 'selected' : ''}>மற்ற வங்கி / ஆப்</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="background: #fff7ed; padding: 14px; border-radius: 14px; border: 1.5px solid #ffedd5;">
+              <span class="form-label" style="color: #9a3412;">முக்கிய பாதுகாப்பு சோதனைகள்:</span>
+
+              <div style="margin-bottom: 10px;">
+                <span style="font-size: 0.9rem; font-weight: 600;">1. ரகசிய OTP எண் யாரிடமாவது பகிர்ந்தீர்களா?</span>
+                <div class="toggle-group" style="margin-top: 4px;">
+                  <button class="toggle-btn ${state.triage.flagOtp ? 'selected-yes' : ''}" onclick="state.triage.flagOtp = true; renderAppStep();">ஆம் (Yes)</button>
+                  <button class="toggle-btn ${!state.triage.flagOtp ? 'selected-no' : ''}" onclick="state.triage.flagOtp = false; renderAppStep();">இல்லை (No)</button>
+                </div>
+              </div>
+
+              <div style="margin-bottom: 10px;">
+                <span style="font-size: 0.9rem; font-weight: 600;">2. UPI PIN எண்ணை உள்ளிட்டு அனுப்பினீர்களா?</span>
+                <div class="toggle-group" style="margin-top: 4px;">
+                  <button class="toggle-btn ${state.triage.flagPin ? 'selected-yes' : ''}" onclick="state.triage.flagPin = true; renderAppStep();">ஆம் (Yes)</button>
+                  <button class="toggle-btn ${!state.triage.flagPin ? 'selected-no' : ''}" onclick="state.triage.flagPin = false; renderAppStep();">இல்லை (No)</button>
+                </div>
+              </div>
+
+              <div>
+                <span style="font-size: 0.9rem; font-weight: 600;">3. AnyDesk, TeamViewer ஆப் இன்ஸ்டால் செய்தீர்களா?</span>
+                <div class="toggle-group" style="margin-top: 4px;">
+                  <button class="toggle-btn ${state.triage.flagRemoteApp ? 'selected-yes' : ''}" onclick="state.triage.flagRemoteApp = true; renderAppStep();">ஆம் (Yes)</button>
+                  <button class="toggle-btn ${!state.triage.flagRemoteApp ? 'selected-no' : ''}" onclick="state.triage.flagRemoteApp = false; renderAppStep();">இல்லை (No)</button>
+                </div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 8px;">
+              <button class="btn-secondary" onclick="state.step = 0; renderAppStep();" style="flex: 1;">⬅ பின்செல்</button>
+              <button class="btn-primary" onclick="state.step = 2; renderAppStep();" style="flex: 2;">பாதுகாப்பு வழிகள் ➔</button>
+            </div>
+          </div>
+        `;
+      }
+      else if (state.step === 2) {
+        const bankInfo = BANK_HELPLINES[state.triage.bank] || BANK_HELPLINES.sbi;
+
+        container.innerHTML = `
+          <div class="card">
+            <div class="card-title">
+              <span>பாதுகாப்பு வழிகாட்டல் (Safety Rules)</span>
+              <button class="btn-listen" onclick="voice.speak('பாதுகாப்பு வழிகாட்டல்: முதலாவதாக 1930 எண்ணை அழையுங்கள். அடுத்ததாக வங்கி கணக்கை முடக்குங்கள்.')">கேட்கவும் 🔊</button>
+            </div>
+            <p style="color: #64748b; font-size: 0.85rem; margin-bottom: 14px;">உங்கள் பதில்களுக்கேற்ப உருவாக்கப்பட்ட நிலையான பாதுகாப்பு விதிகள்:</p>
+
+            <div class="checklist-item critical">
+              <span style="background: #fee2e2; color: #991b1b; padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.75rem;">முதன்மையானது (Priority 1)</span>
+              <div style="font-weight: 700; font-size: 1rem; margin-top: 4px;">தேசிய சைபர் உதவி எண் 1930-ஐ உடனே அழையுங்கள்</div>
+              <div style="font-size: 0.85rem; color: #475569;">முதல் 1 மணி நேரத்திற்குள் எதிர் வங்கிக் கணக்கை முடக்க (Freeze) மத்திய அரசின் எச்சரிக்கை அனுப்பப்படும்.</div>
+              <a href="tel:1930" style="display: inline-block; background: #dc2626; color: white; padding: 6px 14px; border-radius: 8px; font-size: 0.85rem; font-weight: 700; text-decoration: none; margin-top: 8px;">📞 1930 டயல் செய்</a>
+            </div>
+
+            <div class="checklist-item">
+              <span style="background: #fef3c7; color: #92400e; padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.75rem;">வங்கி உடனடி முடக்கம்</span>
+              <div style="font-weight: 700; font-size: 1rem; margin-top: 4px;">${bankInfo.name} அவசர எண்ணை அழைக்கவும்</div>
+              <div style="font-size: 0.85rem; color: #475569;">அவசர எண்: <strong>${bankInfo.phone}</strong>. ஆப் வழிமுறை: ${bankInfo.steps}</div>
+              <a href="tel:${bankInfo.phone.split('/')[0].replace(/[^0-9]/g, '')}" style="display: inline-block; background: #1e293b; color: white; padding: 6px 14px; border-radius: 8px; font-size: 0.85rem; font-weight: 700; text-decoration: none; margin-top: 8px;">📞 வங்கி அவசர எண்</a>
+            </div>
+
+            ${(state.triage.flagRemoteApp || state.triage.fraudType === 'remoteApp') ? `
+              <div class="checklist-item critical">
+                <span style="background: #fee2e2; color: #991b1b; padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.75rem;">அவசர ஆபத்து எச்சரிக்கை</span>
+                <div style="font-weight: 700; font-size: 1rem; margin-top: 4px; color: #991b1b;">மொபைல் இன்டர்நெட்டை ஆஃப் செய்து AnyDesk/TeamViewer ஆப்பை Delete செய்யுங்கள்!</div>
+                <div style="font-size: 0.85rem; color: #475569;">மோசடி நபர்கள் உங்கள் மொபைல் திரையை பார்த்துக் கொண்டிருக்கிறார்கள். உடனே Wi-Fi மற்றும் Mobile Data-வை அணைத்து, ஆப்பை நீக்கி போனை Restart செய்யவும்!</div>
+              </div>
+            ` : ''}
+
+            ${state.triage.flagPin ? `
+              <div class="checklist-item" style="border-left-color: #16a34a;">
+                <div style="font-weight: 700; font-size: 1rem;">UPI PIN எண்ணை உடனே மாற்றுங்கள்</div>
+                <div style="font-size: 0.85rem; color: #475569;">வங்கி ஆப்பில் சென்று 'Change UPI PIN' கொடுத்து புதிய PIN அமைக்கவும்.</div>
+              </div>
+            ` : ''}
+
+            ${state.triage.flagOtp ? `
+              <div class="checklist-item" style="border-left-color: #dc2626;">
+                <div style="font-weight: 700; font-size: 1rem;">இனி வரும் எந்த ஒரு OTP-யையும் கூறாதீர்கள்</div>
+                <div style="font-size: 0.85rem; color: #475569;">வங்கி அதிகாரிகள் அல்லது ரீஃபண்ட் கொடுப்பதாக சொல்லி மீண்டும் OTP கேட்டால் போனை துண்டிக்கவும்.</div>
+              </div>
+            ` : ''}
+
+            <div style="display: flex; gap: 8px; margin-top: 16px;">
+              <button class="btn-secondary" onclick="state.step = 1; renderAppStep();" style="flex: 1;">⬅ பின்செல்</button>
+              <button class="btn-primary" onclick="state.step = 3; renderAppStep();" style="flex: 2;">ஆதாரம் & புகார் தயாரிப்பு ➔</button>
+            </div>
+          </div>
+        `;
+      }
+      else if (state.step === 3) {
+        container.innerHTML = `
+          <div class="card">
+            <div class="card-title">
+              <span>ஆதாரங்கள் சரிபார்ப்பு (Evidence)</span>
+              <button class="btn-listen" onclick="voice.speak('ரசீதில் உள்ள 12 இலக்க UTR எண் மற்றும் விவரங்களை சரிபாருங்கள்.')">கேட்கவும் 🔊</button>
+            </div>
+            <p style="color: #64748b; font-size: 0.85rem; margin-bottom: 14px;">ரசீது ஸ்கிரீன்ஷாட்டை பதிவேற்றலாம் அல்லது மாதிரி ரசீதை சோதிக்கலாம்:</p>
+
+            <div style="border: 2px dashed #94a3b8; border-radius: 12px; padding: 18px; text-align: center; background: #f8fafc; margin-bottom: 14px;">
+              <input type="file" id="file-up" accept="image/*" style="display: none;" onchange="alert('ஸ்கிரீன்ஷாட் ஏற்றப்பட்டது! விவரங்கள் எடுக்கப்படுகின்றன.');" />
+              <button class="btn-primary" style="max-width: 260px; margin: 0 auto;" onclick="document.getElementById('file-up').click();">
+                📁 ஸ்கிரீன்ஷாட் பதிவேற்றவும்
+              </button>
+              <div style="font-size: 0.75rem; color: #64748b; margin-top: 6px;">Google Pay / PhonePe ரசீது அல்லது வங்கி SMS</div>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+              <span style="font-size: 0.85rem; font-weight: 700; color: #475569;">மாதிரி ரசீதை தேர்வு செய்ய (Demo Presets):</span>
+              <div style="display: flex; flex-direction: column; gap: 6px; margin-top: 6px;">
+                ${SAMPLES.map(s => `
+                  <div style="padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 8px; cursor: pointer; background: #f8fafc; font-size: 0.85rem; display: flex; justify-content: space-between;" onclick="state.evidence.utr = '${s.utr}'; state.evidence.amount = '${s.amount}'; state.evidence.suspectUpi = '${s.upi}'; state.evidence.suspectPhone = '${s.phone}'; renderAppStep();">
+                    <span>${s.name}</span>
+                    <strong style="color: #15803d;">தேர்ந்தெடு</strong>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+
+            <div style="background: #f1f5f9; padding: 14px; border-radius: 12px; margin-bottom: 16px;">
+              <h4 style="font-weight: 700; margin-bottom: 10px;">சரிபார்க்க வேண்டிய விவரங்கள் (Review Fields):</h4>
+
+              <div class="form-group">
+                <label class="form-label">பரிவர்த்தனை குறிப்பு எண் (12-digit UTR / Ref No):</label>
+                <input type="text" class="text-input" value="${state.evidence.utr}" oninput="state.evidence.utr = this.value;" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">இழந்த தொகை (ரூபாய்):</label>
+                <input type="number" class="text-input" value="${state.evidence.amount}" oninput="state.evidence.amount = this.value;" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">மோசடி நபர் UPI ID / கணக்கு:</label>
+                <input type="text" class="text-input" value="${state.evidence.suspectUpi}" oninput="state.evidence.suspectUpi = this.value;" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">மோசடி நபர் போன் எண்:</label>
+                <input type="text" class="text-input" value="${state.evidence.suspectPhone}" oninput="state.evidence.suspectPhone = this.value;" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">உங்கள் பெயர் (புகார்தாரர்):</label>
+                <input type="text" class="text-input" value="${state.evidence.victimName}" oninput="state.evidence.victimName = this.value;" />
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 8px;">
+              <button class="btn-secondary" onclick="state.step = 2; renderAppStep();" style="flex: 1;">⬅ பின்செல்</button>
+              <button class="btn-primary" onclick="state.step = 4; renderAppStep();" style="flex: 2;">விவரங்களை உறுதிசெய் ➔</button>
+            </div>
+          </div>
+        `;
+      }
+      else if (state.step === 4) {
+        const amt = `₹${Number(state.evidence.amount || 25000).toLocaleString('en-IN')}`;
+        
+        container.innerHTML = `
+          <div class="card">
+            <div class="card-title">
+              <span>தயாரான புகார் மற்றும் அழைப்பு அட்டை</span>
+              <button class="btn-listen" onclick="voice.speak('1930 அதிகாரியிடம் சொல்லுங்கள்: என் கணக்கிலிருந்து ${amt} எடுக்கப்பட்டுள்ளது. UTR எண் ${state.evidence.utr}.')">கேட்கவும் 🔊</button>
+            </div>
+
+            <div style="display: flex; gap: 8px; border-bottom: 2px solid #e2e8f0; margin-bottom: 14px; overflow-x: auto;">
+              <button class="btn-secondary" style="border: none; border-bottom: 3px solid ${state.activeTab === 'callCard' ? '#15803d' : 'transparent'}; font-weight: 700; white-space: nowrap;" onclick="state.activeTab = 'callCard'; renderAppStep();">
+                1930 அழைப்பு அட்டை 📞
+              </button>
+              <button class="btn-secondary" style="border: none; border-bottom: 3px solid ${state.activeTab === 'portal' ? '#15803d' : 'transparent'}; font-weight: 700; white-space: nowrap;" onclick="state.activeTab = 'portal'; renderAppStep();">
+                போர்டல் புகார் (English) 📋
+              </button>
+              <button class="btn-secondary" style="border: none; border-bottom: 3px solid ${state.activeTab === 'tamil' ? '#15803d' : 'transparent'}; font-weight: 700; white-space: nowrap;" onclick="state.activeTab = 'tamil'; renderAppStep();">
+                தமிழ் புகார் நகல் 📝
+              </button>
+            </div>
+
+            ${state.activeTab === 'callCard' ? `
+              <div class="call-card-box">
+                <div style="color: #38bdf8; font-weight: 800; margin-bottom: 8px;">1930 அதிகாரியிடம் வரிசையாக சொல்ல வேண்டிய 5 குறிப்புகள்:</div>
+                <div class="call-card-item">1. "என் பெயர் ${state.evidence.victimName}. எனது கணக்கிலிருந்து ${amt} மோசடியாக எடுக்கப்பட்டுள்ளது."</div>
+                <div class="call-card-item">2. "பரிவர்த்தனை UTR எண்: ${state.evidence.utr}"</div>
+                <div class="call-card-item">3. "பணம் சென்ற UPI ID: ${state.evidence.suspectUpi}"</div>
+                <div class="call-card-item">4. "மோசடி செய்தவரின் எண்: ${state.evidence.suspectPhone}"</div>
+                <div class="call-card-item">5. "முதல் 1 மணி நேரத்திற்குள் (Golden Hour) அழைக்கிறேன். உடனே எதிர் கணக்கை முடக்க (Freeze) உதவவும்."</div>
+              </div>
+              <a href="tel:1930" class="btn-emergency-dial" style="font-size: 1.1rem; padding: 14px;">📞 இப்போது 1930-ஐ அழைத்து இதை வாசியுங்கள்</a>
+            ` : ''}
+
+            ${state.activeTab === 'portal' ? `
+              <div>
+                <div class="complaint-output" id="portal-copy">To,
+The Nodal Officer / National Cyber Crime Reporting Portal (cybercrime.gov.in)
+Subject: Immediate Cyber Financial Fraud Complaint - Request to Freeze Beneficiary Account under 1930 Protocol
+
+Respected Sir/Madam,
+
+I hereby lodge an urgent complaint regarding a fraudulent transaction that occurred on ${state.evidence.date}, resulting in a loss of ${amt}.
+
+PARTICULARS:
+• Complainant Name: ${state.evidence.victimName}
+• Transaction Reference (UTR): ${state.evidence.utr}
+• Disputed Amount: ${amt}
+• Beneficiary Suspect UPI ID: ${state.evidence.suspectUpi}
+• Suspect Contact Mobile: ${state.evidence.suspectPhone}
+• Modus Operandi: ${state.triage.fraudType.toUpperCase()} Fraud
+• UPI PIN / OTP Compromised: ${state.triage.flagPin ? 'YES' : 'NO'}
+
+RELIEF PRAYED:
+1. Issue an immediate administrative freeze on the beneficiary account (${state.evidence.suspectUpi}) across NPCI network.
+2. Initiate reversal of unauthorized funds.
+
+Yours faithfully,
+${state.evidence.victimName}
+Date: ${new Date().toLocaleDateString('en-IN')}</div>
+                <div style="display: flex; gap: 8px; margin-top: 10px;">
+                  <button class="btn-primary" style="flex: 2;" onclick="navigator.clipboard.writeText(document.getElementById('portal-copy').innerText); alert('நகலெடுக்கப்பட்டது!');">
+                    📋 நகலெடு (Copy English Complaint)
+                  </button>
+                  <button class="btn-secondary" style="flex: 1;" onclick="window.print()">🖨️ Print</button>
+                </div>
+              </div>
+            ` : ''}
+
+            ${state.activeTab === 'tamil' ? `
+              <div>
+                <div class="complaint-output" id="tamil-copy">பெறுநர்:
+காவல் ஆய்வாளர் அவர்கள் / வங்கி மேலாளர் அவர்கள்
+பொருள்: இணைய நிதி மோசடி குறித்து உடனடி நடவடிக்கை எடுக்க கோருதல்
+
+வணக்கம்,
+எனது பெயர் ${state.evidence.victimName}. ${state.evidence.date} அன்று எனது கணக்கிலிருந்து ரூபாய் ${amt} மோசடி நபர்களால் அநீதியாக எடுக்கப்பட்டுள்ளது.
+
+மோசடி விவரங்கள்:
+• பணப்பரிவர்த்தனை குறிப்பு எண் (UTR): ${state.evidence.utr}
+• பணம் சென்ற மோசடி நபரின் UPI: ${state.evidence.suspectUpi}
+• மோசடி செய்தவரின் போன் எண்: ${state.evidence.suspectPhone}
+
+முதல் ஒரு மணி நேரத்திற்குள் 1930 உதவி எண்ணில் தகவல் தெரிவித்து நடவடிக்கை தொடங்கப்பட்டுள்ளது. எதிர் வங்கிக் கணக்கை உடனடியாக முடக்கி (Freeze) பணத்தை மீட்டுத் தர வேண்டுகிறேன்.
+
+இப்படிக்கு,
+${state.evidence.victimName}</div>
+                <div style="display: flex; gap: 8px; margin-top: 10px;">
+                  <button class="btn-primary" style="flex: 2;" onclick="navigator.clipboard.writeText(document.getElementById('tamil-copy').innerText); alert('நகலெடுக்கப்பட்டது!');">
+                    📋 நகலெடு (Copy Tamil Letter)
+                  </button>
+                  <button class="btn-secondary" style="flex: 1;" onclick="window.print()">🖨️ Print</button>
+                </div>
+              </div>
+            ` : ''}
+
+            <div style="display: flex; gap: 8px; margin-top: 16px;">
+              <button class="btn-secondary" onclick="state.step = 3; renderAppStep();" style="flex: 1;">⬅ பின்செல்</button>
+              <button class="btn-primary" onclick="state.step = 5; renderAppStep();" style="flex: 2;">அடுத்த கட்டம் & தனியுரிமை ➔</button>
+            </div>
+          </div>
+        `;
+      }
+      else if (state.step === 5) {
+        container.innerHTML = `
+          <div class="card">
+            <h3 style="font-weight: 800; margin-bottom: 8px;">1930 ரசீது எண் & அடுத்த கட்டம்</h3>
+            
+            <div class="form-group">
+              <label class="form-label">1930 வழங்கிய புகார் எண் (Ack Number):</label>
+              <div style="display: flex; gap: 8px;">
+                <input type="text" class="text-input" placeholder="எ.கா: 1930-TN-2024-XXXX" value="${state.ackNumber}" oninput="state.ackNumber = this.value;" />
+                <button class="btn-primary" style="width: auto; padding: 0 18px;" onclick="alert('புகார் எண் சேமிக்கப்பட்டது!');">சேமி</button>
+              </div>
+            </div>
+
+            <div style="background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 12px; padding: 14px; margin-bottom: 16px; font-size: 0.9rem;">
+              <strong style="color: #1e293b;">அடுத்த 24 மணி நேரத்தில் செய்ய வேண்டியவை:</strong>
+              <div style="margin-top: 6px; line-height: 1.8;">
+                1. 1930-ல் பதிவு செய்த பிறகு <a href="https://cybercrime.gov.in" target="_blank" style="color: #2563eb; font-weight: 700;">cybercrime.gov.in</a> இணையதளத்தில் முழு புகாரை முடிக்கவும்.<br>
+                2. வங்கி கிளைக்கு சென்று மேலாளரிடம் எழுத்துப்பூர்வ புகார் கடிதம் அளிக்கவும்.
+              </div>
+            </div>
+
+            <div style="background: #fef2f2; border: 1px solid #fca5a5; padding: 14px; border-radius: 12px; margin-bottom: 16px;">
+              <strong style="color: #991b1b;">100% தனியுரிமை பாதுகாப்பு:</strong>
+              <p style="font-size: 0.85rem; color: #7f1d1d; margin-top: 4px; margin-bottom: 10px;">
+                உங்கள் தரவுகள் எதுவும் சர்வரில் சேமிக்கப்படவில்லை. உங்கள் மொபைல் ப்ரவுசரில் மட்டுமே உள்ளது.
+              </p>
+              <button class="btn-danger" onclick="state.step = 0; state.triage.amount = ''; alert('அனைத்து தரவுகளும் வெற்றிகரமாக அழிக்கப்பட்டன!'); renderAppStep();">
+                அனைத்து விவரங்களையும் அழி (Wipe All Data) 🗑️
+              </button>
+            </div>
+
+            <button class="btn-secondary" onclick="state.step = 4; renderAppStep();" style="width: 100%;">⬅ பின்செல்</button>
+          </div>
+        `;
+      }
+    }
+
+    const scenes = [
+      {
+        narration: "வணக்கம்! இணையத்தில் பணம் இழந்த உடனே பதற்றப்படாமல் முதல் 1 மணி நேரத்திற்குள் 1930 எண்ணை அழைக்க வேண்டும்.",
+        html: `
+          <div style="text-align: center; padding: 20px 10px;">
+            <div style="background: #fef2f2; border: 2px solid #f87171; border-radius: 16px; padding: 20px;">
+              <h3 style="color: #991b1b; font-weight: 800;">அவசர உதவி 1930</h3>
+              <p style="color: #64748b; font-size: 0.85rem; margin-bottom: 14px;">தேசிய சைபர் கிரைம் உதவி எண்</p>
+              <div style="background: #dc2626; color: white; padding: 14px; border-radius: 12px; font-weight: 800; font-size: 1.15rem;">
+                📞 1930 எண்ணை அழையுங்கள்
+              </div>
+              <div style="margin-top: 12px; background: #f0fdf4; border-left: 4px solid #16a34a; padding: 8px; font-size: 0.8rem; color: #14532d; text-align: left;">
+                🛡️ முதல் 1 மணி நேரம் பணத்தை முடக்க மிக முக்கியமானது!
+              </div>
+            </div>
+          </div>
+        `
+      },
+      {
+        narration: "இரண்டாவதாக, விரைவு பரிசீலனை: போலி ரீஃபண்ட், ₹25,000, கூகுள் பே, பின் எண் உள்ளிட்ட விவரங்களை தேர்வு செய்கிறோம்.",
+        html: `
+          <div>
+            <h4 style="font-weight: 800; margin-bottom: 8px;">விரைவு பரிசீலனை (Triage)</h4>
+            <div style="background: #f0fdf4; border: 2px solid #15803d; padding: 8px; border-radius: 8px; font-weight: 700; color: #14532d; margin-bottom: 6px; font-size: 0.85rem;">
+              ✓ போலி ரீஃபண்ட் மோசடி (Fake Refund)
+            </div>
+            <div style="background: #f8fafc; border: 1.5px solid #cbd5e1; padding: 8px; border-radius: 8px; font-weight: 800; color: #dc2626; margin-bottom: 6px; font-size: 0.9rem;">
+              இழந்த தொகை: ₹25,000
+            </div>
+            <div style="background: #f8fafc; border: 1.5px solid #cbd5e1; padding: 8px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px;">
+              வங்கி: Google Pay (SBI)
+            </div>
+            <div style="background: #fff7ed; padding: 8px; border-radius: 8px; font-size: 0.8rem; color: #9a3412;">
+              UPI PIN உள்ளிட்டீர்களா? <strong>ஆம் (Yes)</strong>
+            </div>
+          </div>
+        `
+      },
+      {
+        narration: "மூன்றாவதாக, பாதுகாப்புப் பட்டியல்: AI கற்பனையாக எந்த விதியையும் உருவாக்காது. நிலையான பாதுகாப்பு விதிகள் மட்டுமே வரும்.",
+        html: `
+          <div>
+            <h4 style="font-weight: 800; margin-bottom: 8px;">பாதுகாப்பு பட்டியல் (Safety Rules)</h4>
+            <div style="background: #fffafa; border-left: 5px solid #dc2626; padding: 8px; border-radius: 8px; margin-bottom: 8px;">
+              <strong style="font-size: 0.85rem;">1. 1930 எண்ணை உடனே அழையுங்கள்</strong>
+              <div style="font-size: 0.75rem; color: #64748b;">எதிர் கணக்கை முடக்க உத்தரவிடப்படும்.</div>
+            </div>
+            <div style="background: #fffbeb; border-left: 5px solid #f59e0b; padding: 8px; border-radius: 8px; margin-bottom: 8px;">
+              <strong style="font-size: 0.85rem;">2. SBI அவசர எண் 1800111109 அழைக்கவும்</strong>
+              <div style="font-size: 0.75rem; color: #64748b;">UPI மற்றும் கார்டை முடக்குங்கள்.</div>
+            </div>
+            <div style="background: #f0fdf4; border-left: 5px solid #16a34a; padding: 8px; border-radius: 8px;">
+              <strong style="font-size: 0.85rem;">3. UPI PIN உடனே மாற்றவும்</strong>
+            </div>
+          </div>
+        `
+      },
+      {
+        narration: "நான்காவதாக, ஆதாரங்கள் பகுப்பாய்வு: ரசீதில் உள்ள 12 இலக்க UTR எண் மற்றும் தொகையை AI தானாகவே எடுக்கிறது.",
+        html: `
+          <div>
+            <h4 style="font-weight: 800; margin-bottom: 8px;">AI ஆதாரங்கள் சரிபார்ப்பு</h4>
+            <div style="background: #f0f9ff; border: 1.5px dashed #0284c7; padding: 8px; border-radius: 8px; text-align: center; margin-bottom: 8px; font-size: 0.8rem; font-weight: 700; color: #0369a1;">
+              📸 Google Pay ரசீது ஸ்கேன் செய்யப்பட்டது
+            </div>
+            <div style="background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 10px; padding: 10px; font-size: 0.85rem;">
+              <div>12-இலக்க UTR: <strong style="color: #15803d;">4289 0184 7120 ✓</strong></div>
+              <div>தொகை: <strong style="color: #dc2626;">₹25,000 ✓</strong></div>
+              <div>மோசடி UPI: <strong>refund.desk98@paytm ✓</strong></div>
+              <div>மோசடி எண்: <strong>9840123456 ✓</strong></div>
+            </div>
+          </div>
+        `
+      },
+      {
+        narration: "இறுதியாக, 1930 அதிகாரியிடம் வாசிக்க வேண்டிய அழைப்பு அட்டை மற்றும் போர்ட்டலுக்கான ஆங்கிலப் புகார் தயாராகிறது!",
+        html: `
+          <div>
+            <h4 style="font-weight: 800; margin-bottom: 8px;">தயாரான அழைப்பு அட்டை</h4>
+            <div style="background: #0f172a; color: white; border-radius: 10px; padding: 12px; font-size: 0.85rem; margin-bottom: 8px;">
+              <div style="color: #38bdf8; font-weight: 800; margin-bottom: 6px;">📞 1930 ஆபரேட்டர் அட்டை:</div>
+              <div>1. "என் கணக்கிலிருந்து ₹25,000 எடுக்கப்பட்டுள்ளது."</div>
+              <div>2. "UTR எண்: 428901847120."</div>
+              <div>3. "மோசடி UPI: refund.desk98@paytm."</div>
+            </div>
+            <div style="background: #f1f5f9; padding: 8px; border-radius: 8px; font-size: 0.75rem; color: #334155;">
+              📋 cybercrime.gov.in போர்டல் புகார் ஆங்கிலத்தில் தயார்!
+            </div>
+          </div>
+        `
+      }
+    ];
+
+    let vIdx = 0, vTimer = null, vPlaying = false;
+
+    function showVideoScene(i) {
+      if (i >= scenes.length) {
+        vPlaying = false; vIdx = 0;
+        document.getElementById('btn-v-play').innerText = "▶ Play Video";
+        document.getElementById('v-narration-sub').innerText = "வீடியோ செயல்முறை விளக்கம் நிறைவடைந்தது.";
+        voice.stop();
+        return;
+      }
+      vIdx = i;
+      const s = scenes[i];
+      document.getElementById('video-sim-content').innerHTML = s.html;
+      document.getElementById('v-narration-sub').innerText = s.narration;
+      document.getElementById('v-timestamp').innerText = `Scene ${i+1}/${scenes.length}`;
+      voice.speak(s.narration);
+      if (vPlaying) vTimer = setTimeout(() => showVideoScene(i + 1), 5000);
+    }
+
+    function toggleVideoPlayback() {
+      vPlaying = !vPlaying;
+      if (vPlaying) {
+        document.getElementById('btn-v-play').innerText = "⏸ Pause";
+        showVideoScene(vIdx);
+      } else {
+        document.getElementById('btn-v-play').innerText = "▶ Play Video";
+        clearTimeout(vTimer);
+        voice.stop();
+      }
+    }
+
+    function recordAndDownloadWebm() {
+      alert("வீடியோ பதிவு தொடங்குகிறது! 25 வினாடிகளில் உங்கள் கணினியில் 'mudhal_mani_demo_video.webm' ஆக பதிவிறக்கப்படும்.");
+      const canvas = document.createElement('canvas');
+      canvas.width = 420; canvas.height = 680;
+      const ctx = canvas.getContext('2d');
+      const stream = canvas.captureStream(30);
+      const mr = new MediaRecorder(stream, { mimeType: 'video/webm' });
+      const chunks = [];
+      mr.ondataavailable = e => chunks.push(e.data);
+      mr.onstop = () => {
+        const blob = new Blob(chunks, { type: 'video/webm' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'mudhal_mani_demo_video.webm';
+        a.click();
+        alert("வீடியோ வெற்றிகரமாக பதிவிறக்கப்பட்டது!");
+      };
+      mr.start();
+
+      let frames = setInterval(() => {
+        ctx.fillStyle = '#0f172a'; ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = '#15803d'; ctx.fillRect(0, 0, canvas.width, 50);
+        ctx.fillStyle = '#ffffff'; ctx.font = 'bold 16px sans-serif'; ctx.fillText("Mudhal Mani (முதல் மணி)", 16, 32);
+        ctx.fillStyle = '#ffffff'; ctx.fillRect(15, 70, canvas.width-30, canvas.height-90);
+        ctx.fillStyle = '#0f172a'; ctx.font = 'bold 14px sans-serif'; ctx.fillText(`Scene ${vIdx+1}: 1930 Cyber Fraud Assistant`, 30, 110);
+      }, 1000/30);
+
+      vPlaying = true;
+      let stepI = 0;
+      let seq = setInterval(() => {
+        showVideoScene(stepI++);
+        if (stepI >= scenes.length) {
+          clearInterval(seq); clearInterval(frames); mr.stop(); vPlaying = false;
+        }
+      }, 4000);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => { renderAppStep(); });
+  </script>
+</body>
+</html>
